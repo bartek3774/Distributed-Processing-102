@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>87617029-5c6a-4080-827c-2822d5a9e956</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.8" />
+  </ItemGroup>
+
+
+</Project>
