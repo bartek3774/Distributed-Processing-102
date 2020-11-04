@@ -1,0 +1,15 @@
+C:\Users\Bartek\source\repos\DP.Patients\DP.Client\obj\Debug\netcoreapp3.1\DP.Client.csprojAssemblyReference.cache
+C:\Users\Bartek\source\repos\DP.Patients\DP.Client\obj\Debug\netcoreapp3.1\DP.Client.AssemblyInfoInputs.cache
+C:\Users\Bartek\source\repos\DP.Patients\DP.Client\obj\Debug\netcoreapp3.1\DP.Client.AssemblyInfo.cs
+C:\Users\Bartek\source\repos\DP.Patients\DP.Client\bin\Debug\netcoreapp3.1\DP.Client.exe
+C:\Users\Bartek\source\repos\DP.Patients\DP.Client\bin\Debug\netcoreapp3.1\DP.Client.deps.json
+C:\Users\Bartek\source\repos\DP.Patients\DP.Client\bin\Debug\netcoreapp3.1\DP.Client.runtimeconfig.json
+C:\Users\Bartek\source\repos\DP.Patients\DP.Client\bin\Debug\netcoreapp3.1\DP.Client.runtimeconfig.dev.json
+C:\Users\Bartek\source\repos\DP.Patients\DP.Client\bin\Debug\netcoreapp3.1\DP.Client.dll
+C:\Users\Bartek\source\repos\DP.Patients\DP.Client\bin\Debug\netcoreapp3.1\DP.Client.pdb
+C:\Users\Bartek\source\repos\DP.Patients\DP.Client\obj\Debug\netcoreapp3.1\DP.Client.dll
+C:\Users\Bartek\source\repos\DP.Patients\DP.Client\obj\Debug\netcoreapp3.1\DP.Client.pdb
+C:\Users\Bartek\source\repos\DP.Patients\DP.Client\obj\Debug\netcoreapp3.1\DP.Client.genruntimeconfig.cache
+C:\Users\Bartek\source\repos\DP.Patients\DP.Client\obj\Debug\netcoreapp3.1\DP.Client.csproj.CoreCompileInputs.cache
+C:\Users\Bartek\source\repos\DP.Patients\DP.Client\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Bartek\source\repos\DP.Patients\DP.Client\obj\Debug\netcoreapp3.1\DP.Client.csproj.CopyComplete

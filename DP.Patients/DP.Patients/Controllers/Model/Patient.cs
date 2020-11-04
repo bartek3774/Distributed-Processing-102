@@ -17,5 +17,7 @@ namespace DP.Patients.Controllers.Model
 
         public DateTime TestDate { get; set; }
 
+        public string Email { get; set; }
+
     }
 }

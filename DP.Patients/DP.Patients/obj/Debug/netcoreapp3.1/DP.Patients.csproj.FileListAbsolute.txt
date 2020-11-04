@@ -56,5 +56,10 @@ C:\Users\Bartek\source\repos\DP.Patients\DP.Patients\bin\Debug\netcoreapp3.1\run
 C:\Users\Bartek\source\repos\DP.Patients\DP.Patients\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Bartek\source\repos\DP.Patients\DP.Patients\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Bartek\source\repos\DP.Patients\DP.Patients\obj\Debug\netcoreapp3.1\DP.Patients.csproj.CopyComplete
+C:\Users\Bartek\source\repos\DP.Patients\DP.Patients\bin\Debug\netcoreapp3.1\Microsoft.Azure.Amqp.dll
+C:\Users\Bartek\source\repos\DP.Patients\DP.Patients\bin\Debug\netcoreapp3.1\Microsoft.Azure.ServiceBus.dll
+C:\Users\Bartek\source\repos\DP.Patients\DP.Patients\bin\Debug\netcoreapp3.1\Microsoft.Azure.Services.AppAuthentication.dll
+C:\Users\Bartek\source\repos\DP.Patients\DP.Patients\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll
+C:\Users\Bartek\source\repos\DP.Patients\DP.Patients\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
 C:\Users\Bartek\source\repos\DP.Patients\DP.Patients\obj\Debug\netcoreapp3.1\DP.Patients.csproj.CoreCompileInputs.cache
 C:\Users\Bartek\source\repos\DP.Patients\DP.Patients\obj\Debug\netcoreapp3.1\DP.Patients.MvcApplicationPartsAssemblyInfo.cache

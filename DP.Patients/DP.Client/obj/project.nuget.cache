@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "h6cSC1Rs0nDa0fg4ULH/npT5GL9rhGgCxJLRFoSuhgZ23SGcdTR9j9PsewsJ4NiTSjlaYr/MPTjc2O4xsRvxyg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Bartek\\source\\repos\\DP.Patients\\DP.Client\\DP.Client.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Bartek\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
