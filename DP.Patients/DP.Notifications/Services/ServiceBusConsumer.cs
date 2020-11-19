@@ -1,5 +1,6 @@
 ﻿using Microsoft.Azure.ServiceBus;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -34,10 +35,15 @@ namespace DP.Notifications.Services
             if (payload.EventName == "NewUserRegistered")
             {
                 EmailSender sender = new EmailSender();
-                sender.SendNewUserEmail(payload.UserEmail);
+                sender.SendNewUserEmail(payload.UserEmail, "Test wiadomosci COVID", "Wiadomość testowa o kwarantannie");               
             }
 
             await _queueClient.CompleteAsync(message.SystemProperties.LockToken);
+        }
+
+        private Task ExceptionHandler(ExceptionReceivedEventArgs e)
+        {
+            return Task.CompletedTask;
         }
     }
     public class MessagePayload

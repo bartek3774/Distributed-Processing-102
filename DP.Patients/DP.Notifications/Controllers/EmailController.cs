@@ -8,19 +8,26 @@ using DP.Notifications.Model;
 using DP.Notifications.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DP.Notifications.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class EmailController : ControllerBase
     {
-        [HttpPost]
-        public void SendMessage(EmailMessageRequest request)
-        {
-            EmailSender sender = new EmailSender();
+        private readonly EmailSender _sender;
 
-            sender.SendNewUserEmail(request.EmailAddress);
+        public EmailController(EmailSender sender)
+        {
+            _sender = sender;
+        }
+        
+        public void SendMessage(string emailAddress, string subject, string body)
+        {
+            
+            _sender.SendNewUserEmail(emailAddress, subject, body);
         }
     }
 }
