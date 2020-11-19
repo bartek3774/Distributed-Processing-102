@@ -1,6 +1,4 @@
-﻿using IdentityModel.Client;
-using Microsoft.Identity.Client;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -8,7 +6,6 @@ using System.ComponentModel;
 using System.Data;
 using System.Net;
 using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Reflection.PortableExecutable;
 using System.Text;
 using System.Text.Json;
@@ -19,45 +16,12 @@ namespace DP.Client
 {
     class Program
     {
-
-        private static async Task<string> GetToken()
-        {
-            using var client = new HttpClient();
-
-            DiscoveryDocumentResponse disco = await client.GetDiscoveryDocumentAsync(new DiscoveryDocumentRequest()
-            {
-                Address = "https://login.microsoftonline.com/146ab906-a33d-47df-ae47-fb16c039ef96/v2.0/",
-                Policy =
-                            {
-                                ValidateEndpoints = false
-                            }
-            });
-
-            if (disco.IsError)
-                throw new InvalidOperationException(
-                    $"No discovery document. Details: {disco.Error}");
-
-            var tokenRequest = new ClientCredentialsTokenRequest
-            {
-                Address = disco.TokenEndpoint,
-                ClientId = "fce95216-40e5-4a34-b041-f287e46532be",
-                ClientSecret = "XWGsyzt9uM-Ia2SA8WE7~gvUJ~4og-U_1p",
-                Scope = "api://fce95216-40e5-4a34-b041-f287e46532be/.default"
-            };
-
-            var token = await client.RequestClientCredentialsTokenAsync(tokenRequest);
-
-            if (token.IsError)
-                throw new InvalidOperationException($"Couldn't gather token. Details: {token.Error}");
-
-            return token.AccessToken;
-        }
-
         public static object JsonConvert { get; private set; }
 
         static async Task Main(string[] args)
         {
-                   
+
+
             bool showMenu = true;
             while (showMenu)
             {
@@ -112,21 +76,6 @@ namespace DP.Client
             Console.ReadKey();
             HttpClient client = new HttpClient();
 
-            //string token = await GetToken();
-
-
-            var app = PublicClientApplicationBuilder.Create("fce95216-40e5-4a34-b041-f287e46532be")
-                .WithAuthority("https://login.microsoftonline.com/146ab906-a33d-47df-ae47-fb16c039ef96/v2.0/")
-                .WithDefaultRedirectUri()
-                .Build();
-
-            var result = await app.AcquireTokenInteractive(new[] { "api://fce95216-40e5-4a34-b041-f287e46532be/.default" }).ExecuteAsync();
-
-            string token = result.AccessToken;
-
-
-            client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse("Bearer " + token);
-
 
             string userJson = System.Text.Json.JsonSerializer.Serialize(p);
 
@@ -153,8 +102,6 @@ namespace DP.Client
             Console.ReadKey();
 
         }
-
-
 
     }
 

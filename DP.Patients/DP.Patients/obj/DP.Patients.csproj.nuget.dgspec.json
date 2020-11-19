@@ -41,14 +41,6 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "Microsoft.ApplicationInsights.AspNetCore": {
-              "target": "Package",
-              "version": "[2.15.0, )"
-            },
-            "Microsoft.AspNetCore.Authentication.JwtBearer": {
-              "target": "Package",
-              "version": "[3.1.9, )"
-            },
             "Microsoft.Azure.ServiceBus": {
               "target": "Package",
               "version": "[5.0.0, )"
@@ -60,14 +52,6 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[3.1.8, )"
-            },
-            "Serilog.AspNetCore": {
-              "target": "Package",
-              "version": "[3.4.0, )"
-            },
-            "Serilog.Sinks.ApplicationInsights": {
-              "target": "Package",
-              "version": "[3.1.0, )"
             }
           },
           "imports": [

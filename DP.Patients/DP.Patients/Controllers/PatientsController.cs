@@ -7,7 +7,6 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using DP.Patients.Controllers.Model;
 using DP.Patients.Services;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -33,21 +32,14 @@ namespace DP.Patients.Controllers
         }
 
         [HttpPost]
-        [Authorize]
         public async  Task<IActionResult> PostAdd(Patient p)
         {
             _context.Patients.Add(p);
             _context.SaveChanges();
 
-            await _sender.SendMesasge(new MessagePayload() { EventName = "NewUserRegistered", UserEmail = p.Email });
+            await _sender.SendMesasge(new MessagePayload() { EventName = "NewUserRegistered", UserEmail = "s9827bs@ms.wwsi.edu.pl" });
 
             return Created("/api/Created", p);
-        }
-
-        [HttpPut]
-        public IActionResult InvalidAction()
-        {
-            throw new InvalidOperationException("Testowy wyjatek");
         }
     }
 

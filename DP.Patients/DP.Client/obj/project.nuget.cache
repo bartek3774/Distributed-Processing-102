@@ -1,22 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "6SFutztWgzazgY2w5wzdMMX86MeCCD2YbMZWywqzl3b9EsLGw/Ssz2xZ6AZXUzIe5tzFp4PjF/dFQDcr+Us4zQ==",
+  "dgSpecHash": "h6cSC1Rs0nDa0fg4ULH/npT5GL9rhGgCxJLRFoSuhgZ23SGcdTR9j9PsewsJ4NiTSjlaYr/MPTjc2O4xsRvxyg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Bartek\\source\\repos\\DP.Patients\\DP.Client\\DP.Client.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Bartek\\.nuget\\packages\\identitymodel\\4.3.0\\identitymodel.4.3.0.nupkg.sha512",
-    "C:\\Users\\Bartek\\.nuget\\packages\\identitymodel.aspnetcore\\2.0.0\\identitymodel.aspnetcore.2.0.0.nupkg.sha512",
-    "C:\\Users\\Bartek\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\3.1.0\\microsoft.aspnetcore.authentication.openidconnect.3.1.0.nupkg.sha512",
-    "C:\\Users\\Bartek\\.nuget\\packages\\microsoft.identity.client\\4.22.0\\microsoft.identity.client.4.22.0.nupkg.sha512",
-    "C:\\Users\\Bartek\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\5.5.0\\microsoft.identitymodel.jsonwebtokens.5.5.0.nupkg.sha512",
-    "C:\\Users\\Bartek\\.nuget\\packages\\microsoft.identitymodel.logging\\5.5.0\\microsoft.identitymodel.logging.5.5.0.nupkg.sha512",
-    "C:\\Users\\Bartek\\.nuget\\packages\\microsoft.identitymodel.protocols\\5.5.0\\microsoft.identitymodel.protocols.5.5.0.nupkg.sha512",
-    "C:\\Users\\Bartek\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\5.5.0\\microsoft.identitymodel.protocols.openidconnect.5.5.0.nupkg.sha512",
-    "C:\\Users\\Bartek\\.nuget\\packages\\microsoft.identitymodel.tokens\\5.5.0\\microsoft.identitymodel.tokens.5.5.0.nupkg.sha512",
-    "C:\\Users\\Bartek\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
-    "C:\\Users\\Bartek\\.nuget\\packages\\system.identitymodel.tokens.jwt\\5.5.0\\system.identitymodel.tokens.jwt.5.5.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512",
-    "C:\\Users\\Bartek\\.nuget\\packages\\system.text.encodings.web\\4.7.0\\system.text.encodings.web.4.7.0.nupkg.sha512"
+    "C:\\Users\\Bartek\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],
   "logs": []
 }
