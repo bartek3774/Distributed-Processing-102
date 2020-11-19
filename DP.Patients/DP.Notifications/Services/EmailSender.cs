@@ -9,7 +9,7 @@ namespace DP.Notifications.Services
 {
     public class EmailSender
     {
-        public void SendNewUserEmail(string email)
+        public void SendNewUserEmail(string emailAddress, string subject, string body)
         {
             var smtpClient = new SmtpClient("smtp.gmail.com")
             {
@@ -18,7 +18,10 @@ namespace DP.Notifications.Services
                 EnableSsl = true,
             };
 
-            smtpClient.Send("sdatabs@gmail.com ", email, "Test wiadomosci COVID", "Wiadomość testowa o kwarantannie");
+                smtpClient.Send("sdatabs@gmail.com ", emailAddress, subject, body);
+
+
+
         }
     }
 }

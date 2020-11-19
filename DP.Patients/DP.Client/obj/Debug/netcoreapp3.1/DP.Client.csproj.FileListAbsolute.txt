@@ -10,6 +10,16 @@ C:\Users\Bartek\source\repos\DP.Patients\DP.Client\bin\Debug\netcoreapp3.1\DP.Cl
 C:\Users\Bartek\source\repos\DP.Patients\DP.Client\obj\Debug\netcoreapp3.1\DP.Client.dll
 C:\Users\Bartek\source\repos\DP.Patients\DP.Client\obj\Debug\netcoreapp3.1\DP.Client.pdb
 C:\Users\Bartek\source\repos\DP.Patients\DP.Client\obj\Debug\netcoreapp3.1\DP.Client.genruntimeconfig.cache
-C:\Users\Bartek\source\repos\DP.Patients\DP.Client\obj\Debug\netcoreapp3.1\DP.Client.csproj.CoreCompileInputs.cache
 C:\Users\Bartek\source\repos\DP.Patients\DP.Client\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\Bartek\source\repos\DP.Patients\DP.Client\obj\Debug\netcoreapp3.1\DP.Client.csproj.CopyComplete
+C:\Users\Bartek\source\repos\DP.Patients\DP.Client\bin\Debug\netcoreapp3.1\IdentityModel.dll
+C:\Users\Bartek\source\repos\DP.Patients\DP.Client\bin\Debug\netcoreapp3.1\IdentityModel.AspNetCore.dll
+C:\Users\Bartek\source\repos\DP.Patients\DP.Client\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+C:\Users\Bartek\source\repos\DP.Patients\DP.Client\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Bartek\source\repos\DP.Patients\DP.Client\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\Bartek\source\repos\DP.Patients\DP.Client\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Bartek\source\repos\DP.Patients\DP.Client\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Bartek\source\repos\DP.Patients\DP.Client\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Bartek\source\repos\DP.Patients\DP.Client\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Bartek\source\repos\DP.Patients\DP.Client\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+C:\Users\Bartek\source\repos\DP.Patients\DP.Client\obj\Debug\netcoreapp3.1\DP.Client.csproj.CoreCompileInputs.cache

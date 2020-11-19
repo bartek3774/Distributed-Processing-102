@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "+xWi0MY6T9GkKPQqKmyy4np49ze9kwEn2suUrOBq5ZFmD8WN/LjNlE3oCNr4Ekob6xnR2dF0ptPH0vtaOSdPeg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Bartek\\source\\repos\\DP.Patients\\DP.Client1\\DP.Client1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Bartek\\.nuget\\packages\\identitymodel\\4.4.0\\identitymodel.4.4.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\Bartek\\.nuget\\packages\\system.text.encodings.web\\4.7.0\\system.text.encodings.web.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}
