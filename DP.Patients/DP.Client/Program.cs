@@ -71,7 +71,8 @@ namespace DP.Client
             Console.WriteLine("Choose an option:");
             Console.WriteLine("1) Add Patient");
             Console.WriteLine("2) List all registered");
-            Console.WriteLine("3) Exit");
+            Console.WriteLine("3) Throw exception");
+            Console.WriteLine("4) Exit");
             Console.Write("\r\nSelect an option: ");
 
             switch (Console.ReadLine())
@@ -83,6 +84,9 @@ namespace DP.Client
                     PatientsPrint();
                     return true;
                 case "3":
+                    PatientException();
+                    return true;
+                case "4":
                     return false;
                 default:
                     return true;
@@ -153,7 +157,20 @@ namespace DP.Client
             Console.ReadKey();
 
         }
+        private static async void PatientException()
+        {
+            HttpClient client = new HttpClient();
+            string token = await GetToken();
 
+            client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse("Bearer " + token);
+
+
+            string userJson = "";
+
+
+            await client.PutAsync("https://localhost:5001/api/Patients",
+                new StringContent(userJson, Encoding.UTF8, "application/json"));
+        }
 
 
     }

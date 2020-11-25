@@ -13,6 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Logging;
+using Serilog;
 
 namespace DP.Notifications
 {
@@ -29,6 +30,8 @@ namespace DP.Notifications
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddApplicationInsightsTelemetry();
 
             services.AddSingleton<EmailSender>();
 
@@ -53,6 +56,8 @@ namespace DP.Notifications
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseSerilogRequestLogging();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

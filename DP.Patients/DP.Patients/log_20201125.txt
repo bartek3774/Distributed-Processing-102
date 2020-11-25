@@ -1,0 +1,565 @@
+2020-11-25 22:15:35.559 +01:00 [INF] User profile is available. Using 'C:\Users\Bartek\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-11-25 22:15:36.901 +01:00 [INF] Now listening on: https://localhost:5001
+2020-11-25 22:15:36.905 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-11-25 22:15:36.907 +01:00 [INF] Hosting environment: Development
+2020-11-25 22:15:36.909 +01:00 [INF] Content root path: C:\Users\Bartek\source\repos\DP.Patients\DP.Patients
+2020-11-25 22:15:42.477 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/Patients  
+2020-11-25 22:15:42.662 +01:00 [INF] Executing endpoint 'DP.Patients.Controllers.PatientsController.GetData (DP.Patients)'
+2020-11-25 22:15:42.721 +01:00 [INF] Route matched with {action = "GetData", controller = "Patients"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetData() on controller DP.Patients.Controllers.PatientsController (DP.Patients).
+2020-11-25 22:15:43.108 +01:00 [INF] Executing action method DP.Patients.Controllers.PatientsController.GetData (DP.Patients) - Validation state: "Valid"
+2020-11-25 22:15:43.554 +01:00 [INF] Entity Framework Core 3.1.8 initialized 'DpDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-11-25 22:16:13.363 +01:00 [ERR] An error occurred using the connection to database 'dp102' on server 'tcp:dp102bs.database.windows.net,1433'.
+2020-11-25 22:16:13.373 +01:00 [ERR] An exception occurred while iterating over the results of a query for context type 'DP.Patients.Controllers.Model.DpDataContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=178; handshake=200; [Login] initialization=2; authentication=5; [Post-Login] complete=29030; 
+ ---> System.ComponentModel.Win32Exception (258): Upłynął limit czasu operacji oczekiwania.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:5fbf3880-754d-4496-bfa3-1ce6894e2455
+Error Number:-2,State:0,Class:11
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=178; handshake=200; [Login] initialization=2; authentication=5; [Post-Login] complete=29030; 
+ ---> System.ComponentModel.Win32Exception (258): Upłynął limit czasu operacji oczekiwania.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:5fbf3880-754d-4496-bfa3-1ce6894e2455
+Error Number:-2,State:0,Class:11
+2020-11-25 22:16:26.813 +01:00 [INF] Executed action DP.Patients.Controllers.PatientsController.GetData (DP.Patients) in 44083.7479ms
+2020-11-25 22:16:26.818 +01:00 [INF] Executed endpoint 'DP.Patients.Controllers.PatientsController.GetData (DP.Patients)'
+2020-11-25 22:16:26.824 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=178; handshake=200; [Login] initialization=2; authentication=5; [Post-Login] complete=29030; 
+ ---> System.ComponentModel.Win32Exception (258): Upłynął limit czasu operacji oczekiwania.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at DP.Patients.Controllers.PatientsController.GetData() in C:\Users\Bartek\source\repos\DP.Patients\DP.Patients\Controllers\PatientsController.cs:line 32
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:5fbf3880-754d-4496-bfa3-1ce6894e2455
+Error Number:-2,State:0,Class:11
+2020-11-25 22:16:26.922 +01:00 [ERR] HTTP GET /api/Patients responded 500 in 44432.9512 ms
+2020-11-25 22:16:26.933 +01:00 [INF] Request finished in 44459.998ms 500 text/plain
+2020-11-25 22:17:25.814 +01:00 [INF] User profile is available. Using 'C:\Users\Bartek\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-11-25 22:17:27.246 +01:00 [INF] Now listening on: https://localhost:5001
+2020-11-25 22:17:27.250 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-11-25 22:17:27.252 +01:00 [INF] Hosting environment: Development
+2020-11-25 22:17:27.255 +01:00 [INF] Content root path: C:\Users\Bartek\source\repos\DP.Patients\DP.Patients
+2020-11-25 22:17:38.854 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/Patients  
+2020-11-25 22:17:38.946 +01:00 [INF] Executing endpoint 'DP.Patients.Controllers.PatientsController.GetData (DP.Patients)'
+2020-11-25 22:17:38.971 +01:00 [INF] Route matched with {action = "GetData", controller = "Patients"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetData() on controller DP.Patients.Controllers.PatientsController (DP.Patients).
+2020-11-25 22:17:39.211 +01:00 [INF] Executing action method DP.Patients.Controllers.PatientsController.GetData (DP.Patients) - Validation state: "Valid"
+2020-11-25 22:17:39.629 +01:00 [INF] Entity Framework Core 3.1.8 initialized 'DpDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-11-25 22:17:41.045 +01:00 [INF] Executed DbCommand (143ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Age], [p].[Email], [p].[Name], [p].[Surname], [p].[TestDate]
+FROM [Patients] AS [p]
+2020-11-25 22:17:41.137 +01:00 [INF] Executed action method DP.Patients.Controllers.PatientsController.GetData (DP.Patients), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1917.2227ms.
+2020-11-25 22:17:41.145 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DP.Patients.Controllers.Model.Patient, DP.Patients, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-11-25 22:17:41.183 +01:00 [INF] Executed action DP.Patients.Controllers.PatientsController.GetData (DP.Patients) in 2202.3812ms
+2020-11-25 22:17:41.186 +01:00 [INF] Executed endpoint 'DP.Patients.Controllers.PatientsController.GetData (DP.Patients)'
+2020-11-25 22:17:41.191 +01:00 [INF] HTTP GET /api/Patients responded 200 in 2324.7581 ms
+2020-11-25 22:17:41.199 +01:00 [INF] Request finished in 2350.9748ms 200 application/json; charset=utf-8
+2020-11-25 22:17:44.765 +01:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/api/Patients application/json; charset=utf-8 0
+2020-11-25 22:17:45.453 +01:00 [INF] Successfully validated the token.
+2020-11-25 22:17:45.460 +01:00 [INF] Executing endpoint 'DP.Patients.Controllers.PatientsController.InvalidAction (DP.Patients)'
+2020-11-25 22:17:45.464 +01:00 [INF] Route matched with {action = "InvalidAction", controller = "Patients"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult InvalidAction() on controller DP.Patients.Controllers.PatientsController (DP.Patients).
+2020-11-25 22:17:45.505 +01:00 [INF] Executing action method DP.Patients.Controllers.PatientsController.InvalidAction (DP.Patients) - Validation state: "Valid"
+2020-11-25 22:17:52.084 +01:00 [INF] Executed action DP.Patients.Controllers.PatientsController.InvalidAction (DP.Patients) in 6615.9434ms
+2020-11-25 22:17:52.089 +01:00 [INF] Executed endpoint 'DP.Patients.Controllers.PatientsController.InvalidAction (DP.Patients)'
+2020-11-25 22:17:52.096 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Testowy wyjatek
+   at DP.Patients.Controllers.PatientsController.InvalidAction() in C:\Users\Bartek\source\repos\DP.Patients\DP.Patients\Controllers\PatientsController.cs:line 50
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-11-25 22:17:52.188 +01:00 [ERR] HTTP PUT /api/Patients responded 500 in 7419.2011 ms
+2020-11-25 22:17:52.195 +01:00 [INF] Request finished in 7430.512ms 500 text/plain
+2020-11-25 22:18:13.932 +01:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/api/Patients application/json; charset=utf-8 0
+2020-11-25 22:18:13.944 +01:00 [INF] Successfully validated the token.
+2020-11-25 22:18:13.947 +01:00 [INF] Executing endpoint 'DP.Patients.Controllers.PatientsController.InvalidAction (DP.Patients)'
+2020-11-25 22:18:13.951 +01:00 [INF] Route matched with {action = "InvalidAction", controller = "Patients"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult InvalidAction() on controller DP.Patients.Controllers.PatientsController (DP.Patients).
+2020-11-25 22:18:13.978 +01:00 [INF] Executing action method DP.Patients.Controllers.PatientsController.InvalidAction (DP.Patients) - Validation state: "Valid"
+2020-11-25 22:18:14.023 +01:00 [INF] Executed action DP.Patients.Controllers.PatientsController.InvalidAction (DP.Patients) in 67.1201ms
+2020-11-25 22:18:14.027 +01:00 [INF] Executed endpoint 'DP.Patients.Controllers.PatientsController.InvalidAction (DP.Patients)'
+2020-11-25 22:18:14.030 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Testowy wyjatek
+   at DP.Patients.Controllers.PatientsController.InvalidAction() in C:\Users\Bartek\source\repos\DP.Patients\DP.Patients\Controllers\PatientsController.cs:line 50
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-11-25 22:18:14.043 +01:00 [ERR] HTTP PUT /api/Patients responded 500 in 103.8353 ms
+2020-11-25 22:18:14.046 +01:00 [INF] Request finished in 114.6144ms 500 text/plain
+2020-11-25 22:20:21.587 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Patients application/json; charset=utf-8 111
+2020-11-25 22:20:21.603 +01:00 [INF] Successfully validated the token.
+2020-11-25 22:20:21.613 +01:00 [INF] Authorization was successful.
+2020-11-25 22:20:21.616 +01:00 [INF] Executing endpoint 'DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients)'
+2020-11-25 22:20:21.636 +01:00 [INF] Route matched with {action = "PostAdd", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostAdd(DP.Patients.Controllers.Model.Patient) on controller DP.Patients.Controllers.PatientsController (DP.Patients).
+2020-11-25 22:20:21.689 +01:00 [INF] Executing action method DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients) - Validation state: "Valid"
+2020-11-25 22:20:21.724 +01:00 [INF] Entity Framework Core 3.1.8 initialized 'DpDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-11-25 22:20:21.973 +01:00 [INF] Executed DbCommand (72ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Patients] ([Age], [Email], [Name], [Surname], [TestDate])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [Patients]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2020-11-25 22:20:22.954 +01:00 [INF] Executed action method DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients), returned result Microsoft.AspNetCore.Mvc.CreatedResult in 1261.4536ms.
+2020-11-25 22:20:22.960 +01:00 [INF] Executing ObjectResult, writing value of type 'DP.Patients.Controllers.Model.Patient'.
+2020-11-25 22:20:22.966 +01:00 [INF] Executed action DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients) in 1325.9722ms
+2020-11-25 22:20:22.970 +01:00 [INF] Executed endpoint 'DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients)'
+2020-11-25 22:20:22.975 +01:00 [INF] HTTP POST /api/Patients responded 201 in 1385.6458 ms
+2020-11-25 22:20:22.982 +01:00 [INF] Request finished in 1395.8238ms 201 application/json; charset=utf-8
+2020-11-25 22:20:34.705 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/Patients  
+2020-11-25 22:20:34.709 +01:00 [INF] Executing endpoint 'DP.Patients.Controllers.PatientsController.GetData (DP.Patients)'
+2020-11-25 22:20:34.714 +01:00 [INF] Route matched with {action = "GetData", controller = "Patients"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetData() on controller DP.Patients.Controllers.PatientsController (DP.Patients).
+2020-11-25 22:20:34.747 +01:00 [INF] Executing action method DP.Patients.Controllers.PatientsController.GetData (DP.Patients) - Validation state: "Valid"
+2020-11-25 22:20:34.757 +01:00 [INF] Entity Framework Core 3.1.8 initialized 'DpDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-11-25 22:20:34.799 +01:00 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Age], [p].[Email], [p].[Name], [p].[Surname], [p].[TestDate]
+FROM [Patients] AS [p]
+2020-11-25 22:20:34.818 +01:00 [INF] Executed action method DP.Patients.Controllers.PatientsController.GetData (DP.Patients), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 67.1152ms.
+2020-11-25 22:20:34.821 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DP.Patients.Controllers.Model.Patient, DP.Patients, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-11-25 22:20:34.826 +01:00 [INF] Executed action DP.Patients.Controllers.PatientsController.GetData (DP.Patients) in 106.9985ms
+2020-11-25 22:20:34.829 +01:00 [INF] Executed endpoint 'DP.Patients.Controllers.PatientsController.GetData (DP.Patients)'
+2020-11-25 22:20:34.832 +01:00 [INF] HTTP GET /api/Patients responded 200 in 123.3878 ms
+2020-11-25 22:20:34.835 +01:00 [INF] Request finished in 130.1673ms 200 application/json; charset=utf-8
+2020-11-25 22:20:44.789 +01:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/api/Patients application/json; charset=utf-8 0
+2020-11-25 22:20:44.802 +01:00 [INF] Successfully validated the token.
+2020-11-25 22:20:44.807 +01:00 [INF] Executing endpoint 'DP.Patients.Controllers.PatientsController.InvalidAction (DP.Patients)'
+2020-11-25 22:20:44.811 +01:00 [INF] Route matched with {action = "InvalidAction", controller = "Patients"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult InvalidAction() on controller DP.Patients.Controllers.PatientsController (DP.Patients).
+2020-11-25 22:20:44.839 +01:00 [INF] Executing action method DP.Patients.Controllers.PatientsController.InvalidAction (DP.Patients) - Validation state: "Valid"
+2020-11-25 22:20:44.884 +01:00 [INF] Executed action DP.Patients.Controllers.PatientsController.InvalidAction (DP.Patients) in 68.0043ms
+2020-11-25 22:20:44.888 +01:00 [INF] Executed endpoint 'DP.Patients.Controllers.PatientsController.InvalidAction (DP.Patients)'
+2020-11-25 22:20:44.891 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Testowy wyjatek
+   at DP.Patients.Controllers.PatientsController.InvalidAction() in C:\Users\Bartek\source\repos\DP.Patients\DP.Patients\Controllers\PatientsController.cs:line 50
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-11-25 22:20:44.909 +01:00 [ERR] HTTP PUT /api/Patients responded 500 in 109.7969 ms
+2020-11-25 22:20:44.916 +01:00 [INF] Request finished in 127.0204ms 500 text/plain
+2020-11-25 22:24:16.735 +01:00 [INF] User profile is available. Using 'C:\Users\Bartek\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-11-25 22:24:17.904 +01:00 [INF] Now listening on: https://localhost:5001
+2020-11-25 22:24:17.912 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-11-25 22:24:17.915 +01:00 [INF] Hosting environment: Development
+2020-11-25 22:24:17.920 +01:00 [INF] Content root path: C:\Users\Bartek\source\repos\DP.Patients\DP.Patients
+2020-11-25 22:24:36.918 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Patients application/json; charset=utf-8 107
+2020-11-25 22:24:37.570 +01:00 [INF] Successfully validated the token.
+2020-11-25 22:24:37.581 +01:00 [INF] Authorization was successful.
+2020-11-25 22:24:37.595 +01:00 [INF] Executing endpoint 'DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients)'
+2020-11-25 22:24:37.645 +01:00 [INF] Route matched with {action = "PostAdd", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostAdd(DP.Patients.Controllers.Model.Patient) on controller DP.Patients.Controllers.PatientsController (DP.Patients).
+2020-11-25 22:24:37.847 +01:00 [INF] Executing action method DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients) - Validation state: "Valid"
+2020-11-25 22:24:38.239 +01:00 [INF] Entity Framework Core 3.1.8 initialized 'DpDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-11-25 22:24:39.028 +01:00 [INF] Executed DbCommand (83ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Patients] ([Age], [Email], [Name], [Surname], [TestDate])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [Patients]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2020-11-25 22:24:39.836 +01:00 [INF] Executed action method DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients), returned result Microsoft.AspNetCore.Mvc.CreatedResult in 1979.5617ms.
+2020-11-25 22:24:39.845 +01:00 [INF] Executing ObjectResult, writing value of type 'DP.Patients.Controllers.Model.Patient'.
+2020-11-25 22:24:39.863 +01:00 [INF] Executed action DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients) in 2209.7656ms
+2020-11-25 22:24:39.868 +01:00 [INF] Executed endpoint 'DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients)'
+2020-11-25 22:24:39.874 +01:00 [INF] HTTP POST /api/Patients responded 201 in 2945.3574 ms
+2020-11-25 22:24:39.882 +01:00 [INF] Request finished in 2970.6138ms 201 application/json; charset=utf-8
+2020-11-25 22:27:10.034 +01:00 [INF] User profile is available. Using 'C:\Users\Bartek\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-11-25 22:27:11.515 +01:00 [INF] Now listening on: https://localhost:5001
+2020-11-25 22:27:11.529 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-11-25 22:27:11.542 +01:00 [INF] Hosting environment: Development
+2020-11-25 22:27:11.546 +01:00 [INF] Content root path: C:\Users\Bartek\source\repos\DP.Patients\DP.Patients
+2020-11-25 22:27:24.718 +01:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/api/Patients application/json; charset=utf-8 0
+2020-11-25 22:27:25.416 +01:00 [INF] Successfully validated the token.
+2020-11-25 22:27:25.423 +01:00 [INF] Executing endpoint 'DP.Patients.Controllers.PatientsController.InvalidAction (DP.Patients)'
+2020-11-25 22:27:25.445 +01:00 [INF] Route matched with {action = "InvalidAction", controller = "Patients"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult InvalidAction() on controller DP.Patients.Controllers.PatientsController (DP.Patients).
+2020-11-25 22:27:25.673 +01:00 [INF] Executing action method DP.Patients.Controllers.PatientsController.InvalidAction (DP.Patients) - Validation state: "Valid"
+2020-11-25 22:27:25.764 +01:00 [INF] Executed action DP.Patients.Controllers.PatientsController.InvalidAction (DP.Patients) in 311.2744ms
+2020-11-25 22:27:25.768 +01:00 [INF] Executed endpoint 'DP.Patients.Controllers.PatientsController.InvalidAction (DP.Patients)'
+2020-11-25 22:27:25.772 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Testowy wyjatek
+   at DP.Patients.Controllers.PatientsController.InvalidAction() in C:\Users\Bartek\source\repos\DP.Patients\DP.Patients\Controllers\PatientsController.cs:line 50
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-11-25 22:27:25.878 +01:00 [ERR] HTTP PUT /api/Patients responded 500 in 1150.2319 ms
+2020-11-25 22:27:25.884 +01:00 [INF] Request finished in 1172.3694ms 500 text/plain
+2020-11-25 22:27:39.980 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Patients application/json; charset=utf-8 107
+2020-11-25 22:27:39.994 +01:00 [INF] Successfully validated the token.
+2020-11-25 22:27:40.001 +01:00 [INF] Authorization was successful.
+2020-11-25 22:27:40.003 +01:00 [INF] Executing endpoint 'DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients)'
+2020-11-25 22:27:40.026 +01:00 [INF] Route matched with {action = "PostAdd", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostAdd(DP.Patients.Controllers.Model.Patient) on controller DP.Patients.Controllers.PatientsController (DP.Patients).
+2020-11-25 22:27:40.091 +01:00 [INF] Executing action method DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients) - Validation state: "Valid"
+2020-11-25 22:27:40.476 +01:00 [INF] Entity Framework Core 3.1.8 initialized 'DpDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-11-25 22:27:41.238 +01:00 [INF] Executed DbCommand (83ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Patients] ([Age], [Email], [Name], [Surname], [TestDate])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [Patients]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2020-11-25 22:27:42.117 +01:00 [INF] Executed action method DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients), returned result Microsoft.AspNetCore.Mvc.CreatedResult in 2018.1695ms.
+2020-11-25 22:27:42.126 +01:00 [INF] Executing ObjectResult, writing value of type 'DP.Patients.Controllers.Model.Patient'.
+2020-11-25 22:27:42.139 +01:00 [INF] Executed action DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients) in 2108.8387ms
+2020-11-25 22:27:42.143 +01:00 [INF] Executed endpoint 'DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients)'
+2020-11-25 22:27:42.152 +01:00 [INF] HTTP POST /api/Patients responded 201 in 2168.9848 ms
+2020-11-25 22:27:42.170 +01:00 [INF] Request finished in 2190.4001ms 201 application/json; charset=utf-8
+2020-11-25 22:28:41.398 +01:00 [INF] User profile is available. Using 'C:\Users\Bartek\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-11-25 22:28:42.656 +01:00 [INF] Now listening on: https://localhost:5001
+2020-11-25 22:28:42.661 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-11-25 22:28:42.665 +01:00 [INF] Hosting environment: Development
+2020-11-25 22:28:42.668 +01:00 [INF] Content root path: C:\Users\Bartek\source\repos\DP.Patients\DP.Patients
+2020-11-25 22:28:52.019 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Patients application/json; charset=utf-8 107
+2020-11-25 22:28:52.837 +01:00 [INF] Successfully validated the token.
+2020-11-25 22:28:52.848 +01:00 [INF] Authorization was successful.
+2020-11-25 22:28:52.852 +01:00 [INF] Executing endpoint 'DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients)'
+2020-11-25 22:28:52.923 +01:00 [INF] Route matched with {action = "PostAdd", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostAdd(DP.Patients.Controllers.Model.Patient) on controller DP.Patients.Controllers.PatientsController (DP.Patients).
+2020-11-25 22:28:53.188 +01:00 [INF] Executing action method DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients) - Validation state: "Valid"
+2020-11-25 22:28:53.622 +01:00 [INF] Entity Framework Core 3.1.8 initialized 'DpDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-11-25 22:28:54.423 +01:00 [INF] Executed DbCommand (80ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Patients] ([Age], [Email], [Name], [Surname], [TestDate])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [Patients]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2020-11-25 22:28:55.277 +01:00 [INF] Executed action method DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients), returned result Microsoft.AspNetCore.Mvc.CreatedResult in 2078.8436ms.
+2020-11-25 22:28:55.286 +01:00 [INF] Executing ObjectResult, writing value of type 'DP.Patients.Controllers.Model.Patient'.
+2020-11-25 22:28:55.304 +01:00 [INF] Executed action DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients) in 2371.6956ms
+2020-11-25 22:28:55.310 +01:00 [INF] Executed endpoint 'DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients)'
+2020-11-25 22:28:55.316 +01:00 [INF] HTTP POST /api/Patients responded 201 in 3283.8883 ms
+2020-11-25 22:28:55.323 +01:00 [INF] Request finished in 3310.8884ms 201 application/json; charset=utf-8
+2020-11-25 22:31:03.146 +01:00 [INF] User profile is available. Using 'C:\Users\Bartek\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-11-25 22:31:04.261 +01:00 [INF] Now listening on: https://localhost:5001
+2020-11-25 22:31:04.268 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-11-25 22:31:04.272 +01:00 [INF] Hosting environment: Development
+2020-11-25 22:31:04.275 +01:00 [INF] Content root path: C:\Users\Bartek\source\repos\DP.Patients\DP.Patients
+2020-11-25 22:31:15.843 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Patients application/json; charset=utf-8 107
+2020-11-25 22:31:16.620 +01:00 [INF] Successfully validated the token.
+2020-11-25 22:31:16.631 +01:00 [INF] Authorization was successful.
+2020-11-25 22:31:16.635 +01:00 [INF] Executing endpoint 'DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients)'
+2020-11-25 22:31:16.673 +01:00 [INF] Route matched with {action = "PostAdd", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostAdd(DP.Patients.Controllers.Model.Patient) on controller DP.Patients.Controllers.PatientsController (DP.Patients).
+2020-11-25 22:31:16.931 +01:00 [INF] Executing action method DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients) - Validation state: "Valid"
+2020-11-25 22:31:17.364 +01:00 [INF] Entity Framework Core 3.1.8 initialized 'DpDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-11-25 22:31:18.164 +01:00 [INF] Executed DbCommand (82ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Patients] ([Age], [Email], [Name], [Surname], [TestDate])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [Patients]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2020-11-25 22:31:18.934 +01:00 [INF] Executed action method DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients), returned result Microsoft.AspNetCore.Mvc.CreatedResult in 1994.335ms.
+2020-11-25 22:31:18.944 +01:00 [INF] Executing ObjectResult, writing value of type 'DP.Patients.Controllers.Model.Patient'.
+2020-11-25 22:31:18.980 +01:00 [INF] Executed action DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients) in 2297.595ms
+2020-11-25 22:31:18.984 +01:00 [INF] Executed endpoint 'DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients)'
+2020-11-25 22:31:18.990 +01:00 [INF] HTTP POST /api/Patients responded 201 in 3136.4331 ms
+2020-11-25 22:31:19.001 +01:00 [INF] Request finished in 3164.3197ms 201 application/json; charset=utf-8
+2020-11-25 22:34:47.743 +01:00 [INF] User profile is available. Using 'C:\Users\Bartek\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-11-25 22:34:48.891 +01:00 [INF] Now listening on: https://localhost:5001
+2020-11-25 22:34:48.903 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-11-25 22:34:48.906 +01:00 [INF] Hosting environment: Development
+2020-11-25 22:34:48.909 +01:00 [INF] Content root path: C:\Users\Bartek\source\repos\DP.Patients\DP.Patients
+2020-11-25 22:35:03.914 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Patients application/json; charset=utf-8 114
+2020-11-25 22:35:04.696 +01:00 [INF] Successfully validated the token.
+2020-11-25 22:35:04.710 +01:00 [INF] Authorization was successful.
+2020-11-25 22:35:04.712 +01:00 [INF] Executing endpoint 'DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients)'
+2020-11-25 22:35:04.754 +01:00 [INF] Route matched with {action = "PostAdd", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostAdd(DP.Patients.Controllers.Model.Patient) on controller DP.Patients.Controllers.PatientsController (DP.Patients).
+2020-11-25 22:35:05.006 +01:00 [INF] Executing action method DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients) - Validation state: "Valid"
+2020-11-25 22:35:05.443 +01:00 [INF] Entity Framework Core 3.1.8 initialized 'DpDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-11-25 22:35:06.237 +01:00 [INF] Executed DbCommand (79ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Patients] ([Age], [Email], [Name], [Surname], [TestDate])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [Patients]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2020-11-25 22:35:07.043 +01:00 [INF] Executed action method DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients), returned result Microsoft.AspNetCore.Mvc.CreatedResult in 2028.3882ms.
+2020-11-25 22:35:07.053 +01:00 [INF] Executing ObjectResult, writing value of type 'DP.Patients.Controllers.Model.Patient'.
+2020-11-25 22:35:07.071 +01:00 [INF] Executed action DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients) in 2309.1031ms
+2020-11-25 22:35:07.076 +01:00 [INF] Executed endpoint 'DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients)'
+2020-11-25 22:35:07.082 +01:00 [INF] HTTP POST /api/Patients responded 201 in 3157.3086 ms
+2020-11-25 22:35:07.090 +01:00 [INF] Request finished in 3182.6775ms 201 application/json; charset=utf-8
+2020-11-25 22:36:47.945 +01:00 [INF] User profile is available. Using 'C:\Users\Bartek\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-11-25 22:36:49.024 +01:00 [INF] Now listening on: https://localhost:5001
+2020-11-25 22:36:49.028 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-11-25 22:36:49.031 +01:00 [INF] Hosting environment: Development
+2020-11-25 22:36:49.033 +01:00 [INF] Content root path: C:\Users\Bartek\source\repos\DP.Patients\DP.Patients
+2020-11-25 22:37:01.636 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Patients application/json; charset=utf-8 111
+2020-11-25 22:37:02.544 +01:00 [INF] Successfully validated the token.
+2020-11-25 22:37:02.556 +01:00 [INF] Authorization was successful.
+2020-11-25 22:37:02.559 +01:00 [INF] Executing endpoint 'DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients)'
+2020-11-25 22:37:02.600 +01:00 [INF] Route matched with {action = "PostAdd", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostAdd(DP.Patients.Controllers.Model.Patient) on controller DP.Patients.Controllers.PatientsController (DP.Patients).
+2020-11-25 22:37:02.895 +01:00 [INF] Executing action method DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients) - Validation state: "Valid"
+2020-11-25 22:37:03.302 +01:00 [INF] Entity Framework Core 3.1.8 initialized 'DpDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-11-25 22:37:04.128 +01:00 [INF] Executed DbCommand (93ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Patients] ([Age], [Email], [Name], [Surname], [TestDate])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [Patients]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2020-11-25 22:37:04.943 +01:00 [INF] Executed action method DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients), returned result Microsoft.AspNetCore.Mvc.CreatedResult in 2039.4259ms.
+2020-11-25 22:37:04.952 +01:00 [INF] Executing ObjectResult, writing value of type 'DP.Patients.Controllers.Model.Patient'.
+2020-11-25 22:37:04.971 +01:00 [INF] Executed action DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients) in 2361.8595ms
+2020-11-25 22:37:04.975 +01:00 [INF] Executed endpoint 'DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients)'
+2020-11-25 22:37:04.981 +01:00 [INF] HTTP POST /api/Patients responded 201 in 3333.2439 ms
+2020-11-25 22:37:04.990 +01:00 [INF] Request finished in 3362.2344ms 201 application/json; charset=utf-8
+2020-11-25 22:37:43.282 +01:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/api/Patients application/json; charset=utf-8 0
+2020-11-25 22:37:43.294 +01:00 [INF] Successfully validated the token.
+2020-11-25 22:37:43.296 +01:00 [INF] Executing endpoint 'DP.Patients.Controllers.PatientsController.InvalidAction (DP.Patients)'
+2020-11-25 22:37:43.301 +01:00 [INF] Route matched with {action = "InvalidAction", controller = "Patients"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult InvalidAction() on controller DP.Patients.Controllers.PatientsController (DP.Patients).
+2020-11-25 22:37:43.343 +01:00 [INF] Executing action method DP.Patients.Controllers.PatientsController.InvalidAction (DP.Patients) - Validation state: "Valid"
+2020-11-25 22:37:43.403 +01:00 [INF] Executed action DP.Patients.Controllers.PatientsController.InvalidAction (DP.Patients) in 98.1605ms
+2020-11-25 22:37:43.408 +01:00 [INF] Executed endpoint 'DP.Patients.Controllers.PatientsController.InvalidAction (DP.Patients)'
+2020-11-25 22:37:43.411 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Testowy wyjatek
+   at DP.Patients.Controllers.PatientsController.InvalidAction() in C:\Users\Bartek\source\repos\DP.Patients\DP.Patients\Controllers\PatientsController.cs:line 50
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-11-25 22:37:43.494 +01:00 [ERR] HTTP PUT /api/Patients responded 500 in 208.6188 ms
+2020-11-25 22:37:43.498 +01:00 [INF] Request finished in 216.0819ms 500 text/plain
+2020-11-25 22:40:24.762 +01:00 [INF] User profile is available. Using 'C:\Users\Bartek\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-11-25 22:40:26.758 +01:00 [INF] Now listening on: https://localhost:5001
+2020-11-25 22:40:26.794 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-11-25 22:40:26.806 +01:00 [INF] Hosting environment: Development
+2020-11-25 22:40:26.815 +01:00 [INF] Content root path: C:\Users\Bartek\source\repos\DP.Patients\DP.Patients
+2020-11-25 22:41:52.283 +01:00 [INF] User profile is available. Using 'C:\Users\Bartek\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-11-25 22:41:53.240 +01:00 [INF] Now listening on: https://localhost:5001
+2020-11-25 22:41:53.248 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-11-25 22:41:53.250 +01:00 [INF] Hosting environment: Development
+2020-11-25 22:41:53.253 +01:00 [INF] Content root path: C:\Users\Bartek\source\repos\DP.Patients\DP.Patients
+2020-11-25 22:42:03.274 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Patients application/json; charset=utf-8 113
+2020-11-25 22:42:04.114 +01:00 [INF] Successfully validated the token.
+2020-11-25 22:42:04.125 +01:00 [INF] Authorization was successful.
+2020-11-25 22:42:04.129 +01:00 [INF] Executing endpoint 'DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients)'
+2020-11-25 22:42:04.178 +01:00 [INF] Route matched with {action = "PostAdd", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostAdd(DP.Patients.Controllers.Model.Patient) on controller DP.Patients.Controllers.PatientsController (DP.Patients).
+2020-11-25 22:42:04.423 +01:00 [INF] Executing action method DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients) - Validation state: "Valid"
+2020-11-25 22:42:04.835 +01:00 [INF] Entity Framework Core 3.1.8 initialized 'DpDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-11-25 22:42:05.618 +01:00 [INF] Executed DbCommand (77ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Patients] ([Age], [Email], [Name], [Surname], [TestDate])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [Patients]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2020-11-25 22:42:06.433 +01:00 [INF] Executed action method DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients), returned result Microsoft.AspNetCore.Mvc.CreatedResult in 2000.3077ms.
+2020-11-25 22:42:06.441 +01:00 [INF] Executing ObjectResult, writing value of type 'DP.Patients.Controllers.Model.Patient'.
+2020-11-25 22:42:06.459 +01:00 [INF] Executed action DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients) in 2273.2815ms
+2020-11-25 22:42:06.464 +01:00 [INF] Executed endpoint 'DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients)'
+2020-11-25 22:42:06.470 +01:00 [INF] HTTP POST /api/Patients responded 201 in 3184.9614 ms
+2020-11-25 22:42:06.479 +01:00 [INF] Request finished in 3210.994ms 201 application/json; charset=utf-8
+2020-11-25 22:44:24.323 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Patients application/json; charset=utf-8 113
+2020-11-25 22:44:24.328 +01:00 [INF] Successfully validated the token.
+2020-11-25 22:44:24.331 +01:00 [INF] Authorization was successful.
+2020-11-25 22:44:24.342 +01:00 [INF] Executing endpoint 'DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients)'
+2020-11-25 22:44:24.345 +01:00 [INF] Route matched with {action = "PostAdd", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostAdd(DP.Patients.Controllers.Model.Patient) on controller DP.Patients.Controllers.PatientsController (DP.Patients).
+2020-11-25 22:44:24.401 +01:00 [INF] Executing action method DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients) - Validation state: "Valid"
+2020-11-25 22:44:24.429 +01:00 [INF] Entity Framework Core 3.1.8 initialized 'DpDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-11-25 22:44:24.506 +01:00 [INF] Executed DbCommand (37ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Patients] ([Age], [Email], [Name], [Surname], [TestDate])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [Patients]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2020-11-25 22:44:25.088 +01:00 [INF] Executed action method DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients), returned result Microsoft.AspNetCore.Mvc.CreatedResult in 683.8322ms.
+2020-11-25 22:44:25.137 +01:00 [INF] Executing ObjectResult, writing value of type 'DP.Patients.Controllers.Model.Patient'.
+2020-11-25 22:44:25.142 +01:00 [INF] Executed action DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients) in 792.7075ms
+2020-11-25 22:44:25.162 +01:00 [INF] Executed endpoint 'DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients)'
+2020-11-25 22:44:25.170 +01:00 [INF] HTTP POST /api/Patients responded 201 in 843.6272 ms
+2020-11-25 22:44:25.175 +01:00 [INF] Request finished in 852.5024ms 201 application/json; charset=utf-8
+2020-11-25 22:48:05.952 +01:00 [INF] User profile is available. Using 'C:\Users\Bartek\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-11-25 22:48:07.190 +01:00 [INF] Now listening on: https://localhost:5001
+2020-11-25 22:48:07.240 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-11-25 22:48:07.242 +01:00 [INF] Hosting environment: Development
+2020-11-25 22:48:07.245 +01:00 [INF] Content root path: C:\Users\Bartek\source\repos\DP.Patients\DP.Patients
+2020-11-25 22:49:11.369 +01:00 [INF] User profile is available. Using 'C:\Users\Bartek\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-11-25 22:49:12.295 +01:00 [INF] Now listening on: https://localhost:5001
+2020-11-25 22:49:12.306 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-11-25 22:49:12.331 +01:00 [INF] Hosting environment: Development
+2020-11-25 22:49:12.333 +01:00 [INF] Content root path: C:\Users\Bartek\source\repos\DP.Patients\DP.Patients
+2020-11-25 22:49:28.984 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Patients application/json; charset=utf-8 133
+2020-11-25 22:49:29.762 +01:00 [INF] Successfully validated the token.
+2020-11-25 22:49:29.772 +01:00 [INF] Authorization was successful.
+2020-11-25 22:49:29.775 +01:00 [INF] Executing endpoint 'DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients)'
+2020-11-25 22:49:29.811 +01:00 [INF] Route matched with {action = "PostAdd", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostAdd(DP.Patients.Controllers.Model.Patient) on controller DP.Patients.Controllers.PatientsController (DP.Patients).
+2020-11-25 22:49:30.109 +01:00 [INF] Executing action method DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients) - Validation state: "Valid"
+2020-11-25 22:49:30.480 +01:00 [INF] Entity Framework Core 3.1.8 initialized 'DpDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-11-25 22:49:31.300 +01:00 [INF] Executed DbCommand (80ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Patients] ([Age], [Email], [Name], [Surname], [TestDate])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [Patients]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2020-11-25 22:49:32.108 +01:00 [INF] Executed action method DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients), returned result Microsoft.AspNetCore.Mvc.CreatedResult in 1989.7302ms.
+2020-11-25 22:49:32.117 +01:00 [INF] Executing ObjectResult, writing value of type 'DP.Patients.Controllers.Model.Patient'.
+2020-11-25 22:49:32.143 +01:00 [INF] Executed action DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients) in 2321.4669ms
+2020-11-25 22:49:32.148 +01:00 [INF] Executed endpoint 'DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients)'
+2020-11-25 22:49:32.154 +01:00 [INF] HTTP POST /api/Patients responded 201 in 3160.0415 ms
+2020-11-25 22:49:32.168 +01:00 [INF] Request finished in 3189.3271ms 201 application/json; charset=utf-8
+2020-11-25 22:51:18.987 +01:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/api/Patients application/json; charset=utf-8 0
+2020-11-25 22:51:19.000 +01:00 [INF] Successfully validated the token.
+2020-11-25 22:51:19.010 +01:00 [INF] Executing endpoint 'DP.Patients.Controllers.PatientsController.InvalidAction (DP.Patients)'
+2020-11-25 22:51:19.015 +01:00 [INF] Route matched with {action = "InvalidAction", controller = "Patients"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult InvalidAction() on controller DP.Patients.Controllers.PatientsController (DP.Patients).
+2020-11-25 22:51:19.038 +01:00 [INF] Executing action method DP.Patients.Controllers.PatientsController.InvalidAction (DP.Patients) - Validation state: "Valid"
+2020-11-25 22:51:19.082 +01:00 [INF] Executed action DP.Patients.Controllers.PatientsController.InvalidAction (DP.Patients) in 62.9408ms
+2020-11-25 22:51:19.085 +01:00 [INF] Executed endpoint 'DP.Patients.Controllers.PatientsController.InvalidAction (DP.Patients)'
+2020-11-25 22:51:19.089 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Testowy wyjatek
+   at DP.Patients.Controllers.PatientsController.InvalidAction() in C:\Users\Bartek\source\repos\DP.Patients\DP.Patients\Controllers\PatientsController.cs:line 50
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-11-25 22:51:19.185 +01:00 [ERR] HTTP PUT /api/Patients responded 500 in 188.6738 ms
+2020-11-25 22:51:19.188 +01:00 [INF] Request finished in 202.402ms 500 text/plain
+2020-11-25 22:56:39.518 +01:00 [INF] User profile is available. Using 'C:\Users\Bartek\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-11-25 22:56:40.643 +01:00 [INF] Now listening on: https://localhost:5001
+2020-11-25 22:56:40.659 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-11-25 22:56:40.662 +01:00 [INF] Hosting environment: Development
+2020-11-25 22:56:40.665 +01:00 [INF] Content root path: C:\Users\Bartek\source\repos\DP.Patients\DP.Patients
+2020-11-25 22:57:09.298 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Patients application/json; charset=utf-8 114
+2020-11-25 22:57:10.036 +01:00 [INF] Successfully validated the token.
+2020-11-25 22:57:10.046 +01:00 [INF] Authorization was successful.
+2020-11-25 22:57:10.049 +01:00 [INF] Executing endpoint 'DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients)'
+2020-11-25 22:57:10.113 +01:00 [INF] Route matched with {action = "PostAdd", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostAdd(DP.Patients.Controllers.Model.Patient) on controller DP.Patients.Controllers.PatientsController (DP.Patients).
+2020-11-25 22:57:10.355 +01:00 [INF] Executing action method DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients) - Validation state: "Valid"
+2020-11-25 22:57:10.745 +01:00 [INF] Entity Framework Core 3.1.8 initialized 'DpDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-11-25 22:57:11.612 +01:00 [INF] Executed DbCommand (87ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Patients] ([Age], [Email], [Name], [Surname], [TestDate])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [Patients]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2020-11-25 22:57:12.505 +01:00 [INF] Executed action method DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients), returned result Microsoft.AspNetCore.Mvc.CreatedResult in 2141.9105ms.
+2020-11-25 22:57:12.513 +01:00 [INF] Executing ObjectResult, writing value of type 'DP.Patients.Controllers.Model.Patient'.
+2020-11-25 22:57:12.533 +01:00 [INF] Executed action DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients) in 2410.7641ms
+2020-11-25 22:57:12.540 +01:00 [INF] Executed endpoint 'DP.Patients.Controllers.PatientsController.PostAdd (DP.Patients)'
+2020-11-25 22:57:12.546 +01:00 [INF] HTTP POST /api/Patients responded 201 in 3239.1735 ms
+2020-11-25 22:57:12.555 +01:00 [INF] Request finished in 3262.8053ms 201 application/json; charset=utf-8
